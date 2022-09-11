@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        let nota = []
+        let dato, media, nota1, nota2,nota3;
+        for (let i = 0; i < nota.length; i++) {
+            const element = nota[i];
+        dato = window.prompt("Primer número?", "0");
+        nota1 = parseInt(dato);
+        dato = window.prompt("Segundo número?", "0");
+        nota2 = parseInt(dato);
+        dato = window.prompt("Tercer número?", "0");
+        nota3 = parseInt(dato);
+        }
+
+
+        media = (nota1 + nota2 + nota3) / 3;
+
+
+        if (media <8) {
+            resultat = " Suspendido";
+        }
+        else {
+            resultat = " Aprobado";
+        }
+        document.write(`<h3>La nota final es ${resultat} </h3>`);
+    </script>
+</head>
+
+</html

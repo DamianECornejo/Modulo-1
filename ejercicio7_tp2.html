@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function reverse(str) {
+            if (str === "") {
+                return "";
+            } else {
+                return reverse(str.substr(1)) + str.charAt(0);
+            }
+        }
+
+        let reverseStringIs = reverse("adam")
+        console.log(reverseStringIs)
+    </script>
+</body>
+
+</html>

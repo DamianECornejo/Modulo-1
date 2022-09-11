@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        var dato = [] ;
+        var media,nota,val1;
+
+            nota = window.prompt("Primer número?", "0");
+            val1 = parseInt(dato[nota]);
+            nota = window.prompt("Primer número?", "0");
+            val1 = parseInt(dato[nota]);
+            nota = window.prompt("Primer número?", "0");
+            val1 = parseInt(dato[nota]);
+           
+
+            for (let index = 0; index < dato.length; index++) {
+            const hola =  dato[index];
+            if (val1 > 11 || val1 < 0) {
+                nota = window.prompt("Ingresaste un dato mal en la nota n° " + i + " ,Por favor ingrese otro dato.")   
+                val1 = parseInt(nota);
+            } 
+        }
+        
+
+            
+        
+        media = (nota[0] + nota[1] + nota[2]) / 3;
+
+
+        if (media > 5) {
+            resultat = " Suspendido";
+        }
+        else {
+            resultat = " Aprobado";
+        }
+        document.write(`<h3>La nota final es ${resultat} </h3>`);
+
+
+       // while (dato > 11 || dato < 0) {
+    //dato = window.prompt("Ingresaste un dato mal en la nota n° " + i + " ,Por favor ingrese otro dato.")
+    //dato = parseInt(dato);
+    </script>
+</head>
+
+</html

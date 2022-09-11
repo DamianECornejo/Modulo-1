@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicio 1</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var valores = ["verdadero", false, 2, "hola", "mundo", 3, "char"];
+    var max = 0;
+    var maxString;
+    let sum = 0;
+    valores.sort(function(a, b){return a - b});
+
+    valores.forEach(function (val) {
+
+      if (val.length > max) {
+        max = val.length;
+        maxString = val;
+      }
+
+      if ( typeof( val ) == 'string' ){
+
+      }
+      }
+    );
+
+    for (let i = 0; i < valores.length; ++i) {
+      for (let j = i + 1; j < valores.length; ++j) {
+
+        if (valores[i].length > valores[j].length) {
+          let auxiliar = valores[i];
+          valores[i] = valores[j];
+          valores[j] = auxiliar;
+        }
+      }
+    }
+
+
+
+    console.log(maxString);
+    console.log(sum);
+    console.log(valores);
+
+
+  </script>
+</body>
+
+</html>
