@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Ejercicio 1 - Trabajo practico n° 2</title>
+  <title>Ejercicio 1 - Trabajo Practico n° 2</title>
 </head>
 
 <body>
@@ -10,8 +10,11 @@
     var valores = ["verdadero", false, 2, "hola", "mundo", 3, "char"];
     var max = 0;
     var maxString;
-    let sum = 0;
-    valores.sort(function(a, b){return a - b});
+    var sum = 0;
+    var i;
+  
+
+    valores.sort(function (a, b) { return a - b });
 
     valores.forEach(function (val) {
 
@@ -20,11 +23,9 @@
         maxString = val;
       }
 
-      if ( typeof( val ) == 'string' ){
-
-      }
-      }
+    }
     );
+
 
     for (let i = 0; i < valores.length; ++i) {
       for (let j = i + 1; j < valores.length; ++j) {
@@ -35,12 +36,19 @@
           valores[j] = auxiliar;
         }
       }
+    
     }
 
+sum = valores[2] + valores[5];
+resta = valores[2] - valores[5];
+division = valores[2] / valores[5];
+multiplicacion = valores[2] * valores[5];
 
-
-    console.log(maxString);
     console.log(sum);
+    console.log(resta);
+    console.log(division);
+    console.log(multiplicacion);
+    console.log(maxString);
     console.log(valores);
 
 
