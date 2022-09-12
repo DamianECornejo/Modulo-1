@@ -7,16 +7,16 @@
 
 <body>
     <script type="text/javascript">
-        function reverse(str) {
-            if (str === "") {
+        function reverse(rs) {
+            if (rs === "") {
                 return "";
             } else {
-                return reverse(str.substr(1)) + str.charAt(0);
+                return reverse(rs.substr(1)) + rs.charAt(0);
             }
         }
 
-        let reverseStringIs = reverse("adam")
-        console.log(reverseStringIs)
+        let rs = prompt("Escribir una frase...")
+        console.log (reverse(rs));
     </script>
 </body>
 
