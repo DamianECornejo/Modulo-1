@@ -7,24 +7,36 @@
 
 <body>
   <script type="text/javascript">
-   var verdadero, char;
-    var valores = [verdadero, false, 2, "hola", "mundo", 3, char]
-    
-  
-
+    var verdadero, char, maxString;
+    var max = 0;
     var valorresStr = [];
-    for (let i = 0; i < valores.length; i++) {
-        if (typeof valores[i] === "string") {
-          valores.push (valores[i])  
-        }
-        
+    var totales = [];
+    var valores = [verdadero, false, 2, "hola", "mundo", 3, char]
+
+    for(let palabra of valores) {
+      totales.push(palabra.length);
     }
-    console.log ("2, Imprimir los elementos de menores a mayor cantidad de letra: " + valorresStr.sort(function(a,b){
-  
-        return a-b;
-        
-      }));
     
+    let maximo = Math.max.apply(null, totales);
+    
+    for (let elemento of valores) {
+      if (elemento.length === maximo) {
+        console.log(elemento);
+      }
+    }
+
+
+    for (let i = 0; i < valores.length; i++) {
+      if (typeof valores[i] === "string") {
+        valorresStr.push(valores[i])
+      }
+    }
+    console.log("2, Imprimir los elementos de menores a mayor cantidad de letra: " + valorresStr.sort(function (a, b) {
+
+      return a - b;
+
+    }));
+
 
   </script>
 </body>

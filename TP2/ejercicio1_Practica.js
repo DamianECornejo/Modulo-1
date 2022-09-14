@@ -12,9 +12,9 @@
         }
         
     }
-    console.log ("2, Imprimir los elementos de menores a mayor cantidad de letra: " + valorresStr.sort(function(a,b){
+    console.log ("2, Imprimir los elementos de menores a mayor cantidad de letra: " + 
+      valorresStr.sort(function(a,b){
   
         return a-b;
         
       }));
-      
