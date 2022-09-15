@@ -10,18 +10,39 @@
     var verdadero, char, maxString;
     var max = 0;
     var valores = [verdadero, false, 2, "hola", "mundo", 3, char]
+    var valorresStr = [];
+    var sum = 0;
+    var res = 0;
+    var div = 0;
+    var mul = 1;
+    
 
 
     for (let i = 0; i < valores.length; i++) {
       if (typeof valores[i] === "string") {
         valorresStr.push(valores[i])
+
       }
+      if (typeof valores[i] === "number") {
+        sum = valores[i] + sum;
+        res = valores[i] - res;
+        div = div /valores[i];
+        mul *= valores[i]
+      }
+  
     }
     console.log("2, Imprimir los elementos de menores a mayor cantidad de letra: " + valorresStr.sort(function (a, b) {
 
       return a - b;
 
     }));
+
+    console.log(sum);
+    console.log(res);
+    console.log(mul);
+    console.log(div);
+
+
 
 
   </script>
