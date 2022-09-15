@@ -7,24 +7,25 @@
 
 <body>
   <script type="text/javascript">
-    var verdadero, char, maxString;
+    var verdadero, char, maxString, totales,cadenas;
     var max = 0;
-    var valorresStr = [];
-    var totales = [];
     var valores = [verdadero, false, 2, "hola", "mundo", 3, char]
+    var valorresStr = [];
 
-    for(let palabra of valores) {
-      totales.push(palabra.length);
-    }
-    
-    let maximo = Math.max.apply(null, totales);
-    
-    for (let elemento of valores) {
-      if (elemento.length === maximo) {
-        console.log(elemento);
+
+    function cadenaMasLarga(cadenas) {
+
+      let candidata = cadenas[0];
+
+      for (let i = 0; i < valores.length; i++) {
+        if (valores[i].length > candidata.length) {
+          candidata = valores[i];
+        }
       }
-    }
 
+      return candidata;
+      console.log(candidata);
+    }
 
     for (let i = 0; i < valores.length; i++) {
       if (typeof valores[i] === "string") {
@@ -36,6 +37,7 @@
       return a - b;
 
     }));
+    console.log (cadenaMasLarga(cadenas));
 
 
   </script>

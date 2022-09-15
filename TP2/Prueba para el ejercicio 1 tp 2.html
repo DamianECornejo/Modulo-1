@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicio 1 - Trabajo Practico n° 2</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+   let palabras = ['mucho', 'muchomucho', 'muchomuchomucho', 'muchomuchomuchomuchoa'];
+    let totales  = [];
+    for(let palabra of palabras) {
+      totales.push(palabra.length);
+    }
+    
+    let maximo = Math.max.apply(null, totales);
+    
+    for (let elemento of palabras) {
+      if (elemento.length === maximo) {
+        console.log(elemento);
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
