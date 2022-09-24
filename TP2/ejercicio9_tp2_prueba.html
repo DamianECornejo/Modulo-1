@@ -4,44 +4,55 @@
 <head>
     <meta charset="utf-8">
     <script>
-        var dato = [] ;
-        var media,nota,val1;
-
-            nota = window.prompt("Primer número?", "0");
-            val1 = parseInt(dato[nota]);
-            nota = window.prompt("Primer número?", "0");
-            val1 = parseInt(dato[nota]);
-            nota = window.prompt("Primer número?", "0");
-            val1 = parseInt(dato[nota]);
-           
-
-            for (let index = 0; index < dato.length; index++) {
-            const hola =  dato[index];
-            if (val1 > 11 || val1 < 0) {
-                nota = window.prompt("Ingresaste un dato mal en la nota n° " + i + " ,Por favor ingrese otro dato.")   
-                val1 = parseInt(nota);
-            } 
-        }
+        var dato = [];
+        var val,media; 
+        const sum = 0;
         
+     
+        val = window.prompt("Primer número?");
+        dato.push(parseInt(val));
 
-            
+        val = window.prompt("Segundo número?");
+        dato.push(parseInt(val));
+
+        val = window.prompt("Tercer número?");
+        dato.push(parseInt(val));
         
-        media = (nota[0] + nota[1] + nota[2]) / 3;
+    for (let i = 0; i < dato.length; i++) {
+    const notacion = dato[i];
+    while (dato[i] > 10 || dato[i] <  0) {
+        val = window.prompt("Nota n° " + i + " no corresponde, ingrese el dato correspondido.");
+        val = dato.splice(i,1,parseInt(val));
+    }
+}
+   
 
 
-        if (media > 5) {
-            resultat = " Suspendido";
+        function ArrayAvg(myArray) {
+            var i = 0, summ = 0, ArrayLen = dato.length;
+            while (i < ArrayLen) {
+                summ = summ + dato[i++];
+            }
+            return summ / ArrayLen;
         }
-        else {
-            resultat = " Aprobado";
+        var a = ArrayAvg(dato);
+        console.log(a)
+
+
+
+        if (a <= 5) {
+            resultat = " Suspendido.";
+        } else {
+            if (a >= 6 && a <= 8) {
+                resultat = "Aprobado.";
+            }
+            else {
+                resultat = "Sobresaliente.";
+            }
         }
         document.write(`<h3>La nota final es ${resultat} </h3>`);
 
-
-       // while (dato > 11 || dato < 0) {
-    //dato = window.prompt("Ingresaste un dato mal en la nota n° " + i + " ,Por favor ingrese otro dato.")
-    //dato = parseInt(dato);
     </script>
 </head>
 
-</html
+</html>
